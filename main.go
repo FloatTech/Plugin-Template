@@ -10,7 +10,7 @@ import (
 )
 
 func Inita() {
-	// -------------在此下书写插件内容-------------
+	// --------------------------在此下书写插件内容--------------------------
 	en := ctrl.Register("demo", &ctrl.Options{
 		DisableOnDefault: false,
 		Help:             "help from demo",
@@ -20,7 +20,7 @@ func Inita() {
 			fmt.Println("msg recv.")
 			ctx.SendChain(message.Text("回复"))
 		})
-	// -------------在此上书写插件内容-------------
+	// --------------------------在此上书写插件内容--------------------------
 }
 
 // 以下勿动
@@ -37,7 +37,7 @@ func Hook(botconf interface{}, apicallers interface{}, hooknew interface{},
 	dd := getdata(&del)
 	ctrl.Register = *(*(func(service string, o *ctrl.Options) *zero.Engine))(unsafe.Pointer(&rd))
 	ctrl.Delete = *(*(func(service string)))(unsafe.Pointer(&dd))
-	zero.HookCtx(sndgrpmsg, sndgrpmsg, getmsg, parsectx)
+	zero.HookCtx(sndgrpmsg, sndprivmsg, getmsg, parsectx)
 	message.HookMsg(custnode, pasemsg, parsemsgfromarr)
 	IsHooked = true
 	// fmt.Printf("[plugin]set reg: %x, del: %x\n", ctrl.Register, ctrl.Delete)
