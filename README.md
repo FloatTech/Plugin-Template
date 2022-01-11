@@ -3,7 +3,7 @@
 
 # 使用方法
 ### 编写插件
-复制`main.go`到本地或使用[模版](https://github.com/FloatTech/Plugin-Template)，修改`main.go`的`Inita`函数为插件内容，语法与[ZeroBot](https://github.com/wdvxdr1123/ZeroBot)基本相同。
+复制`main.go`到本地或使用[本模版](https://github.com/FloatTech/Plugin-Template)，修改`main.go`的`Inita`函数为插件内容，语法与[ZeroBot](https://github.com/wdvxdr1123/ZeroBot)基本相同。
 ### 编译为动态库
 #### 使用Actions编译
 1. fork 本仓库
